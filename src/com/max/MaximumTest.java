@@ -1,16 +1,16 @@
 package com.max;
 
 public class MaximumTest {
-	private Integer x, y, z;
+	private Float x, y, z;
 
-	MaximumTest(Integer x, Integer y, Integer z) {
+	MaximumTest(Float x, Float y, Float z) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
 	public void findMaximum() {
-		Integer max = x;
+		Float max = x;
 		if (y.compareTo(max) > 0) {
 
 			max = y;
@@ -24,7 +24,7 @@ public class MaximumTest {
 	}
 
 	public static void main(String[] args) {
-		Integer x1 = 100, y1 = 200, z1 = 300;
+		Float x1 = 100.25f, y1 = 200.99f, z1 = 300.98f;
 		MaximumTest t1 = new MaximumTest(x1, y1, z1);
 		t1.findMaximum();
 		MaximumTest t2 = new MaximumTest(y1, z1, x1);
