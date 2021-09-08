@@ -1,21 +1,10 @@
 package com.max;
 
 public class MaximumTest {
-	Integer x1, y1, z1;
-	Float x2, y2, z2;
 
-	public MaximumTest(Integer x1, Integer y1, Integer z1) {
-		this.x1 = x1;
-		this.y1 = y1;
-		this.z1 = z1;
-	}
-
-	public MaximumTest(Float x2, Float y2, Float z2) {
-		this.x2 = x2;
-		this.y2 = y2;
-		this.z2 = z2;
-	}
-
+	/*
+	 * method to find max of integer
+	 */
 	public Integer findMaximum(Integer x1, Integer y1, Integer z1) {
 		Integer max = x1;
 		if (y1.compareTo(max) > 0) {
@@ -28,6 +17,9 @@ public class MaximumTest {
 		return max;
 	}
 
+	/*
+	 * method to find max of float
+	 */
 	public Float findMaximum(Float x, Float y, Float z) {
 		Float max = x;
 		if (y.compareTo(max) > 0) {
@@ -38,17 +30,34 @@ public class MaximumTest {
 		}
 		System.out.printf("\nMax of" + x + " " + y + " " + z + "  is" + max);
 		return max;
+
+	}
+
+	/*
+	 * method to find max od string
+	 */
+	public String findMaximum(String x3, String y3, String z3) {
+		String max = x3;
+		if (y3.compareTo(max) > 0) {
+			max = y3;
+		}
+		if (z3.compareTo(max) > 0) {
+			max = z3;
+		}
+		System.out.printf("\nMax of" + x3 + " " + y3 + " " + z3 + "  is" + max);
+		return max;
 	}
 
 	public static void main(String[] args) {
-		Float x1 = 100.25f, y1 = 200.99f, z1 = 300.98f;
-		MaximumTest t1 = new MaximumTest(x1, y1, z1);
-		t1.findMaximum(x1, y1, z1);
-		MaximumTest t2 = new MaximumTest(y1, z1, x1);
-		t2.findMaximum(y1, z1, x1);
-		MaximumTest t3 = new MaximumTest(z1, x1, y1);
-		t3.findMaximum(z1, x1, y1);
+		String s1 = "Apple", s2 = "Peach", s3 = "Banana";
+		MaximumTest t1 = new MaximumTest();
+		t1.findMaximum(s1, s2, s3);
+		MaximumTest t2 = new MaximumTest();
+		t2.findMaximum(s2, s3, s1);
+		MaximumTest t3 = new MaximumTest();
+		t3.findMaximum(s3, s1, s2);
+    }
 
 	}
 
-}
+
