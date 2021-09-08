@@ -14,10 +14,14 @@ public class MaximumTest<T extends Comparable<T>> {
 	/*
 	 * generic method to find max
 	 */
-	public static <T extends Comparable<T>> void findMaximum(T... values) {
+	public <T extends Comparable<T>> void findMaximum(T... values) {
 		Arrays.sort(values);
 		T max = values[values.length - 1];
-		System.out.println("max element is" + max);
+		printMax(max);
+	}
+
+	public <T> void printMax(T max) {
+		System.out.println("Max element is" + max);
 	}
 
 	public static void main(String[] args) {
