@@ -1,6 +1,7 @@
 package com.max;
 
 public class MaximumTest {
+
 	/*
 	 * method to find max of integer
 	 */
@@ -29,6 +30,7 @@ public class MaximumTest {
 		}
 		System.out.printf("\nMax of" + x + " " + y + " " + z + "  is" + max);
 		return max;
+
 	}
 
 	/*
@@ -54,7 +56,8 @@ public class MaximumTest {
 		t2.findMaximum(s2, s3, s1);
 		MaximumTest t3 = new MaximumTest();
 		t3.findMaximum(s3, s1, s2);
+    }
 
 	}
 
-}
+
